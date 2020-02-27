@@ -7,11 +7,13 @@
         <title>Web-Scraping Project</title>      
     </head>
 
+    {% for data in data %} 
+
     <body>
         <div class='container'>
             <div class = 'row'>
                 <div class = 'col-md-12' id ='titleBig'>
-                    Mission to Mars
+                    Mission to Mars {{data.weather}}
                 </div>
             </div>
         </div>
