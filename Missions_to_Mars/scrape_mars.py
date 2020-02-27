@@ -91,33 +91,15 @@ def scrape():
     scraped_data['Recent Image'] = image_url
     # ## Mars Weather
 
-    # In[114]:
-
-
     weather_url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(weather_url)
-
-
-    # In[115]:
-
-
     time.sleep(2)
-
-
-    # In[116]:
-
-
     html = browser.html
     soup = bs(html, 'html.parser')
-
-
-    # In[117]:
-
-
     tweets = soup.find_all('span', class_="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0")
     mars_weather = tweets[41].text
+
     scraped_data['Weather'] = mars_weather
-    
     # ## Mars Facts
 
     # In[119]:
